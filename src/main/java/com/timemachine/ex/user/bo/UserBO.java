@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.timemachine.ex.common.EncryptUtils;
 import com.timemachine.ex.user.dao.UserDAO;
+import com.timemachine.ex.user.model.User;
 
 @Service
 public class UserBO {
@@ -23,6 +24,25 @@ public class UserBO {
 		
 		return userDAO.insertUser(name, email, loginId, encryptPassword, university);
 		
+	}
+	
+	public boolean duplicateId(String loginId) {
+		
+		int count = userDAO.selectCountByLoginId(loginId);
+		
+		return count != 0;
+		
+	}
+	
+	public User getUser(String loginId, String password) {
+		// 암호화 
+		String encryptPassword = EncryptUtils.md5(password);
+		
+		return userDAO.selectUser(loginId, encryptPassword);
+	}
+	
+	public User getUserById(int id) {
+		return userDAO.selectUserById(id);
 	}
 
 }

@@ -62,7 +62,7 @@ p {
 
 /*Navigation*/
 
-.navigation {
+header {
   width: 100%;
   position: fixed;
   z-index: 100;
@@ -182,11 +182,19 @@ p {
 .hero {
   /* display: flex; */
   min-height: 300px;
-  height: 730px;
+  height: 780px;
   background-image: url("/img/bg2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.hero .list-box {
+	width:900px;
+}
+
+.hero .input-box {
+	width:650px;
 }
 
 .hero .text {
