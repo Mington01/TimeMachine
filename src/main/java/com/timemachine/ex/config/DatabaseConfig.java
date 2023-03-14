@@ -11,7 +11,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 @Configuration
-@MapperScan(basePackages="com.timemachine.*") //interface(mapper)가 있는 경
+@MapperScan(basePackages="com.timemachine.ex*") //interface(mapper)가 있는 경로
 public class DatabaseConfig {
 	
 	@Bean

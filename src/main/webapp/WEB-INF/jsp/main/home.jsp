@@ -103,7 +103,8 @@
           </div>
         </div>
       </div>
-
+      
+      <hr>
 
       <div class="contact container" id="contact">
         <div class="short-contact">
